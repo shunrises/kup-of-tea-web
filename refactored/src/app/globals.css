@@ -1,0 +1,81 @@
+@import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css');
+
+@import 'tailwindcss';
+
+@theme {
+  --color-background: '#FFFFFF';
+  --color-foreground: '#1B1D1F';
+  --color-hover: '#F7F8F9';
+  --color-primary: 'hsl(36, 95%, 53%)';
+  --color-primaryForeground: 'hsl(0, 0%, 100%)';
+  --color-primaryHover: 'hsl(36, 84%, 45%)';
+  --color-secondary: '#F7F8F9';
+  --color-secondaryForeground: '#6C7885';
+  --color-secondaryHover: '#E8EBED';
+  --color-muted: '#E8EBED';
+  --color-mutedForeground: '#9EA4AA';
+  --color-destructive: 'hsl(350, 89%, 68%)';
+  --color-destructiveForeground: 'hsl(0, 0%, 100%)';
+  --color-destructiveHover: 'hsl(350, 59%, 48%)';
+  --color-border: '#E8EBED';
+  --color-input: '#C9CDD2';
+  --color-brand-50: 'hsl(35, 100%, 98%)';
+  --color-brand-100: 'hsl(37, 96%, 91%)';
+  --color-brand-200: 'hsl(36, 96%, 81%)';
+  --color-brand-300: 'hsl(36, 95%, 74%)';
+  --color-brand-400: 'hsl(36, 95%, 62%)';
+  --color-brand-500:
+    'hsl(36, 95%, 53%)', --color-brand-600: 'hsl(36, 84%, 45%)';
+  --color-brand-700: 'hsl(36, 84%, 37%)';
+  --color-brand-800: 'hsl(36, 84%, 27%)';
+  --color-brand-900: 'hsl(36, 85%, 21%)';
+
+  --color-grey-100: '#E8EBED';
+  --color-grey-200: '#C9CDD2';
+  --color-grey-400: '#9EA4AA';
+  --color-grey-500: '#6C7885';
+  --color-grey-600: '#454C53';
+  --color-grey-700: '#24282D';
+
+  --font-family-pretendard:
+    'Pretendard Variable', '-apple-system', 'BlinkMacSystemFont', 'system-ui',
+    'Roboto', 'Helvetica Neue', 'Segoe UI', 'Apple SD Gothic Neo',
+    'Noto Sans KR', 'Malgun Gothic', 'Apple Color Emoji', 'Segoe UI Emoji',
+    'Segoe UI Symbol', 'sans-serif';
+  --font-size-caption1: '11px';
+  --font-size-caption2: '12px';
+  --font-size-body1: '14px';
+  --font-size-body2: '14px';
+  --font-size-body3: '15px';
+  --font-size-body3-1: '15px';
+  --font-size-body4: '16px';
+  --font-size-body4-1: '16px';
+  --font-size-body5: '20px';
+  --font-size-title: '24px';
+  --font-weight-caption1: '400';
+  --font-weight-caption2: '400';
+  --font-weight-body1: '400';
+  --font-weight-body2: '600';
+  --font-weight-body3: '600';
+  --font-weight-body3-1: '500';
+  --font-weight-body4: '600';
+  --font-weight-body4-1: '500';
+  --font-weight-body5: '600';
+  --font-weight-title: '700';
+  --line-height-caption1: '1.4';
+  --line-height-caption2: '1.4';
+  --line-height-body1: '1.5';
+  --line-height-body2: '1.3';
+  --line-height-body3: '1.5';
+  --line-height-body3-1: '1.5';
+  --line-height-body4: '1.4';
+  --line-height-body4-1: '1.4';
+  --line-height-body5: '1.5';
+  --line-height-title: '1.5';
+}
+
+body {
+  background: #ffffff;
+  color: #1b1d1f;
+  font-family: 'Pretendard Variable', sans-serif;
+}
