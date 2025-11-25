@@ -1,0 +1,132 @@
+@theme {
+  --color-background: var(--color-background);
+  --color-foreground: var(--color-foreground);
+  --color-hover: var(--color-hover);
+  --color-primary: var(--color-primary);
+  --color-primaryForeground: var(--color-primaryForeground);
+  --color-primaryHover: var(--color-primaryHover);
+  --color-secondary: var(--color-secondary);
+  --color-secondaryForeground: var(--color-secondaryForeground);
+  --color-secondaryHover: var(--color-secondaryHover);
+  --color-muted: var(--color-muted);
+  --color-mutedForeground: var(--color-mutedForeground);
+  --color-destructive: var(--color-destructive);
+  --color-destructiveForeground: var(--color-destructiveForeground);
+  --color-destructiveHover: var(--color-destructiveHover);
+  --color-border: var(--color-border);
+  --color-input: var(--color-input);
+  --color-brand-50: var(--color-brand-50);
+  --color-brand-100: var(--color-brand-100);
+  --color-brand-200: var(--color-brand-200);
+  --color-brand-300: var(--color-brand-300);
+  --color-brand-400: var(--color-brand-400);
+  --color-brand-500: var(--color-brand-500);
+  --color-brand-600: var(--color-brand-600);
+  --color-brand-700: var(--color-brand-700);
+  --color-brand-800: var(--color-brand-800);
+  --color-brand-900: var(--color-brand-900);
+
+  --color-grey-50: var(--color-grey-50);
+  --color-grey-100: var(--color-grey-100);
+  --color-grey-200: var(--color-grey-200);
+  --color-grey-400: var(--color-grey-400);
+  --color-grey-500: var(--color-grey-500);
+  --color-grey-600: var(--color-grey-600);
+  --color-grey-700: var(--color-grey-700);
+
+  --font-family-pretendard:
+    'Pretendard Variable', '-apple-system', 'BlinkMacSystemFont', 'system-ui',
+    'Roboto', 'Helvetica Neue', 'Segoe UI', 'Apple SD Gothic Neo',
+    'Noto Sans KR', 'Malgun Gothic', 'Apple Color Emoji', 'Segoe UI Emoji',
+    'Segoe UI Symbol', 'sans-serif';
+  --font-size-caption1: var(--font-size-caption1);
+  --font-size-caption2: var(--font-size-caption2);
+  --font-size-body1: var(--font-size-body1);
+  --font-size-body2: var(--font-size-body2);
+  --font-size-body3: var(--font-size-body3);
+  --font-size-body3-1: var(--font-size-body3-1);
+  --font-size-body4: var(--font-size-body4);
+  --font-size-body4-1: var(--font-size-body4-1);
+  --font-size-body5: var(--font-size-body5);
+  --font-size-title: var(--font-size-title);
+  --font-weight-caption1: var(--font-weight-caption1);
+  --font-weight-caption2: var(--font-weight-caption2);
+  --font-weight-body1: var(--font-weight-body1);
+  --font-weight-body2: var(--font-weight-body2);
+  --font-weight-body3: var(--font-weight-body3);
+  --font-weight-body3-1: var(--font-weight-body3-1);
+  --font-weight-body4: var(--font-weight-body4);
+  --font-weight-body4-1: var(--font-weight-body4-1);
+  --font-weight-body5: var(--font-weight-body5);
+  --font-weight-title: var(--font-weight-title);
+  --line-height-caption1: var(--line-height-caption1);
+  --line-height-caption2: var(--line-height-caption2);
+  --line-height-body1: var(--line-height-body1);
+  --line-height-body2: var(--line-height-body2);
+  --line-height-body3: var(--line-height-body3);
+  --line-height-body3-1: var(--line-height-body3-1);
+  --line-height-body4: var(--line-height-body4);
+  --line-height-body4-1: var(--line-height-body4-1);
+  --line-height-body5: var(--line-height-body5);
+  --line-height-title: var(--line-height-title);
+}
+
+@utility title {
+  font-size: var(--font-size-title);
+  font-weight: var(--font-weight-title);
+  line-height: var(--line-height-title);
+}
+
+@utility body1 {
+  font-size: var(--font-size-body1);
+  font-weight: var(--font-weight-body1);
+  line-height: var(--line-height-body1);
+}
+
+@utility body2 {
+  font-size: var(--font-size-body2);
+  font-weight: var(--font-weight-body2);
+  line-height: var(--line-height-body2);
+}
+
+@utility body3 {
+  font-size: var(--font-size-body3);
+  font-weight: var(--font-weight-body3);
+  line-height: var(--line-height-body3);
+}
+
+@utility body3-1 {
+  font-size: var(--font-size-body3-1);
+  font-weight: var(--font-weight-body3-1);
+  line-height: var(--line-height-body3-1);
+}
+
+@utility body4 {
+  font-size: var(--font-size-body4);
+  font-weight: var(--font-weight-body4);
+  line-height: var(--line-height-body4);
+}
+
+@utility body4-1 {
+  font-size: var(--font-size-body4-1);
+  font-weight: var(--font-weight-body4-1);
+  line-height: var(--line-height-body4-1);
+}
+
+@utility body5 {
+  font-size: var(--font-size-body5);
+  font-weight: var(--font-weight-body5);
+  line-height: var(--line-height-body5);
+}
+
+@utility caption1 {
+  font-size: var(--font-size-caption1);
+  font-weight: var(--font-weight-caption1);
+  line-height: var(--line-height-caption1);
+}
+
+@utility caption2 {
+  font-size: var(--font-size-caption2);
+  font-weight: var(--font-weight-caption2);
+  line-height: var(--line-height-caption2);
+}

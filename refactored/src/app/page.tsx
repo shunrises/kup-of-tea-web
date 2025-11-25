@@ -1,9 +1,9 @@
 'use client'
 
 import { useRouter } from 'next/navigation'
-import classNames from 'classnames'
+import { cn } from '@/lib/utils'
 import { useState } from 'react'
-import { TabBar } from '@/components/ui/tab-bar'
+import Image from 'next/image'
 
 export default function Home() {
   const router = useRouter()
@@ -36,78 +36,92 @@ export default function Home() {
   }
 
   return (
-    <div className="flex flex-col w-full px-5 py-5 h-dvh justify-end items-center bg-white">
-      <div className="w-full h-[75%] flex flex-col justify-evenly">
-        <div className="flex flex-col items-center">
-          <div
-            className={classNames(
-              'font-semibold text-4xl text-base-600',
-              'mb-2',
-            )}
-          >
-            <span>My </span>
-            <span className="text-rose-500 text-5xl font-extrabold">K</span>
-            <span>up Of Tea</span>
-          </div>
-          <span className="text-base-400 text-sm font-medium tracking-[-2%] leading-[130%]">
-            Kpop 취향표 생성기
-          </span>
-          <TabBar
-            tabs={[
-              { label: '하나의 팀에서 선택하기', value: '/select' },
-              { label: '여러 팀에서 선택하기', value: '/custom' },
-            ]}
-          />
-        </div>
-        <div className="flex-grow" />
-        <div className="flex flex-col w-full">
+    <div className="flex flex-col w-full h-dvh pb-12 px-5 bg-white justify-between items-center">
+      <div className="flex flex-col h-full items-center justify-center">
+        <Image
+          src="/logo.svg"
+          alt="덕틸리티 로고"
+          width={240}
+          height={55}
+          priority
+        />
+      </div>
+      <div className="flex flex-col w-full gap-12">
+        {/* Card Section */}
+        <div className="flex flex-col gap-5 w-full">
           <button
             onClick={() => toRoute('/select')}
-            className={classNames(
-              'transition-all duration-100 flex flex-col w-full items-start justify-start px-7 pt-6 h-[124px] border border-gray-300 rounded-md mb-2',
-              isLoading ? 'bg-gray-200' : 'bg-gray-50',
+            disabled={isLoading || isCustomLoading}
+            className={cn(
+              'w-full bg-grey-50 rounded-[8px] flex items-center gap-1 p-4 pr-9',
+              isLoading ? 'opacity-70' : 'hover:bg-grey-100 cursor-pointer',
             )}
           >
-            <div className="font-semibold text-[18px] text-gray-800">
-              하나의 팀에서 선택하기
+            <div className="size-20 flex items-center justify-center">
+              <Image
+                src="/956e34c933b2dbe24ce722c89a3ede41fabb9e26.svg"
+                alt="하나의 팀 아이콘"
+                width={88}
+                height={88}
+                className="w-full h-full"
+              />
             </div>
-            <div className="text-start font-medium text-[12px] text-gray-400 mb-2">
-              한 그룹에서만 선택해서
-              <br />
-              취향표를 만들어요
+
+            <div className="flex flex-col items-start shrink-0">
+              <div className="text-grey-700 text-[20px] font-semibold leading-[1.5] tracking-[-0.5px]">
+                하나의 팀에서 선택하기
+              </div>
+              <div className="text-start text-grey-400 text-[14px] font-normal leading-[1.5] tracking-[-0.3px]">
+                한 그룹에서만 선택해서
+                <br />
+                취향표를 만들어요
+              </div>
             </div>
           </button>
+
+          {/* 여러 팀에서 선택하기 */}
           <button
             onClick={() => toRoute('/custom')}
-            className={classNames(
-              'transition-all duration-100 flex flex-col w-full items-start justify-start px-7 pt-6 h-[124px] border border-gray-300 rounded-md mb-2',
-              isCustomLoading ? 'bg-gray-200' : 'bg-gray-50',
+            disabled={isLoading || isCustomLoading}
+            className={cn(
+              'w-full bg-grey-50 rounded-[8px] flex items-center gap-1 p-4 pr-9',
+              isCustomLoading
+                ? 'opacity-70'
+                : 'hover:bg-grey-100 cursor-pointer',
             )}
           >
-            <div className="font-semibold text-[18px] text-gray-800">
-              여러 팀에서 선택하기
+            <div className="size-20 flex items-center justify-center">
+              <Image
+                src="/f225a007dcfdf2baf9a08ccd167f8cf961d44eed.svg"
+                alt="여러 팀 아이콘"
+                width={88}
+                height={88}
+                className="w-12"
+              />
             </div>
-            <div className="text-start font-medium text-[12px] text-gray-400 mb-2">
-              여러 그룹을 자유롭게 선택해서
-              <br />
-              취향표를 만들어요
+            <div className="flex flex-col items-start shrink-0">
+              <div className="text-grey-700 text-[20px] font-semibold leading-[1.5] tracking-[-0.5px]">
+                여러 팀에서 선택하기
+              </div>
+              <div className="text-start text-grey-400 text-[14px] font-normal leading-[1.5] tracking-[-0.3px]">
+                여러 그룹을 자유롭게 선택해서
+                <br />
+                취향표를 만들어요
+              </div>
             </div>
           </button>
         </div>
-        <div className="flex-grow" />
-        <div className="flex flex-col items-center mb-4 w-full">
+        {/* Footer Links */}
+        <div className="w-full flex flex-col items-center">
           <a
-            className="underline text-gray-400 font-medium text-[13px] mb-3"
-            href="/submit"
-          >
-            팀/멤버 정보 제출하기
-          </a>
-          <a
-            className="underline text-gray-400 font-medium text-[13px] mb-3"
-            href="request"
+            href="/request"
+            className="text-grey-600 text-[12px] font-normal leading-[14px] tracking-[-0.5px] underline mb-[16px]"
           >
             추가요청이 있다면 알려주세요!
           </a>
+          <p className="text-grey-600 text-[11px] font-normal leading-[14px] tracking-[-0.5px]">
+            @DevvTyga
+          </p>
         </div>
       </div>
     </div>

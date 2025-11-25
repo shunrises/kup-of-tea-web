@@ -23,7 +23,6 @@ const TabBar = ({
   value,
   defaultValue,
   onValueChange,
-  className,
   ...props
 }: TabBarProps) => {
   return (
@@ -31,24 +30,17 @@ const TabBar = ({
       value={value}
       defaultValue={defaultValue}
       onValueChange={onValueChange}
-      className={cn('w-full', className, 'h-11 w-full rounded-lg')}
       {...props}
+      className="bg-grey-400/10 w-full rounded-[8px]"
     >
-      <TabsPrimitive.List
-        style={{
-          display: 'grid',
-          gridTemplateColumns: `repeat(${tabs.length}, 1fr)`,
-          backgroundColor: 'rgba(158, 164, 170, 0.1)',
-          padding: '6px 8px',
-          borderRadius: '8px',
-        }}
-      >
+      <TabsPrimitive.List className="grid grid-cols-2 py-1.5 px-2">
         {tabs.map((tab) => (
           <TabsPrimitive.Trigger
             key={tab.value}
             value={tab.value}
             className={cn(
-              'h-full rounded-md text-sm font-regular text-grey-400 data-[state=active]:font-semibold data-[state=active]:text-grey-700 data-[state=active]:bg-white data-[state=active]:shadow-sm',
+              'text-grey-400 body1',
+              'data-[state=active]:text-grey-700 data-[state=active]:bg-white data-[state=active]:shadow-[0px_1px_2px_0px_rgba(158,164,170,0.30)] data-[state=active]:body2 data-[state=active]:text-grey-700 py-[7px] rounded-[6px]',
             )}
           >
             {tab.label}

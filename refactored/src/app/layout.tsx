@@ -36,20 +36,9 @@ export default function RootLayout({
           `}
         </Script>
       </head>
-      <body className="font-pretendard tracking-[-2%] flex items-center justify-center min-h-dvh bg-gray-100">
+      <body className="font-pretendard tracking-[-2%] flex items-center justify-center min-h-dvh w-full bg-grey-100/30">
         <Providers>
-          <div className="max-w-lg w-full">
-            <div className="fixed py-1 max-w-lg flex left-0 right-0 mx-auto top-0 w-full bg-pink-300 bg-opacity-35 text-center items-center justify-center">
-              <a
-                href="https://www.ducktility.studio/"
-                className="underline font-semibold text-blue-600"
-              >
-                덕틸리티
-              </a>
-              <span className="font-regular">에서 새롭게 만나요!</span>
-            </div>
-        {children}
-          </div>
+          <div className="max-w-md w-full">{children}</div>
         </Providers>
         <Toaster />
       </body>
